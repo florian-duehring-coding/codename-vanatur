@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create new account{% endblock %}
+
+{% block header_additional_action_buttons %}
+<div class="d-flex ml-2">
+    <div class="header-additional-action-buttons">
+        
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<!-- Row -->
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <form>
+            {{ form_start(form) }}
+            <div class="card">
+                <div class="card-body">
+                    <center class="mt-4"> 
+                        <a href="#"><img src="/images/avatar.png" class="rounded-circle" width="150" /></a>
+                        <input type="file" id="avatar-update" style="display: none;" />
+                    </center>
+                </div>
+                <div>
+                    <hr> </div>
+                <div class="card-body">
+                    
+                    <!--<input type='text' class='form-control' />-->
+                    {{ form_row(form.firstName) }}
+                    <small class="text-muted">Your Email address </small>
+                    <input type='text' class='form-control' />
+                    <small class="text-muted pt-4 db">Your phone number</small>
+                    <input type='text' class='form-control' />
+                    <button class='btn btn-outline-success'>Save</button> 
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </form>
+    </div>
+    <!-- Column -->
+    <!-- Column -->
+    <div class="col-lg-8 col-xlg-9 col-md-7">
+        <div class="card">
+            <div class="card-body">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Column -->
+</div>
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript">
+$( document ).ready(function() {
+    $("a").click(function() {
+        $("input[id='avatar-update']").click();
+    });
+});
+</script>
+{% endblock %}
