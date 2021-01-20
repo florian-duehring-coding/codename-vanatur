@@ -14,31 +14,43 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
+     *
+     * @var integer
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @var string
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @var string
      */
     private $lastName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @var string
      */
     private $nickname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @var string
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *
+     * @var string
      */
     private $image;
 

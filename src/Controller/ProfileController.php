@@ -14,8 +14,8 @@ class ProfileController extends AbstractController
     /**
      * @Route("/p/create", name="profile-create")
      */
-    public function profileCreate(ProfileRepository $profileRepository): Response{
-
+    public function profileCreate(ProfileRepository $profileRepository): Response
+    {
         $form = $this->createForm(UserType::class, new User());
         return $this->render('profile/profile-edit.html.twig', [
             'controller_name' => 'ProfileController',
@@ -35,7 +35,8 @@ class ProfileController extends AbstractController
     /**
      * @Route("/p/{nickname}/edit", name="profile-edit")
      */
-    public function profileEdit(string $nickname, ProfileRepository $profileRepository): Response{
+    public function profileEdit(string $nickname, ProfileRepository $profileRepository): Response
+    {
         return $this->render('profile/profile-edit.html.twig', [
             'controller_name' => 'ProfileController',
         ]);
